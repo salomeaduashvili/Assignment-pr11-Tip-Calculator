@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Space Mono";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #c5e4e7;
+  padding-top: 5rem;
+}
+
+main {
+  width: 37.5rem;
+  height: 78.9rem;
+  padding: 3.2rem 2.4rem;
+  box-shadow: 0 32px 43px 0 rgba(79, 166, 175, 0.2);
+  background-color: #fff;
+  margin: 4.09rem 0 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  position: relative;
+}
+
+p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #5e7a7d;
+}
+
+#person-input,
+#bill-input {
+  height: 4.8rem;
+  width: 100%;
+  padding: 0.6rem 1.75rem 0.6rem 1.93rem;
+  border-radius: 5px;
+  background-color: #f3f9fa;
+  justify-content: center;
+  border: none;
+  font-family: "Space Mono";
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #00474b;
+  text-align: right;
+  cursor: pointer;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+#person-input::placeholder,
+#custom::placeholder,
+#bill-input::placeholder {
+  font-family: "Space Mono";
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #00474b;
+  text-align: right;
+}
+
+#bill-container img {
+  position: absolute;
+  left: 5.5%;
+  bottom: 86.9%;
+}
+
+#tip-div {
+  margin-top: 2.8rem;
+}
+
+#btn-container {
+  margin-top: 1.6rem;
+  display: grid;
+  grid-template-columns: repeat(2, 14.6rem);
+  gap: 1.6rem;
+  padding-bottom: 0.6rem;
+}
+
+button {
+  padding: 0.6rem 1.75rem 0.6rem 1.63rem;
+  border-radius: 5px;
+  background-color: #00474b;
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+button:hover {
+  background-color: #9fe8df;
+  color: #00474b;
+}
+
+button:active {
+  opacity: 0.8;
+}
+
+#custom {
+  padding: 0.6rem 1.73rem 0.6rem 1.9rem;
+  border-radius: 5px;
+  background-color: #f3f9fa;
+  border: none;
+  font-family: "Space Mono";
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #00474b;
+  text-align: right;
+  cursor: pointer;
+  max-height: 4.7rem;
+}
+
+#custom::placeholder {
+  color: #547878;
+}
+
+#person-input:hover,
+#bill-input:hover,
+#custom:hover {
+  border: 2px solid #26c2ae;
+}
+
+#people-container {
+  margin-top: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+#people-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+#error {
+  color: #e17457;
+  display: none;
+}
+
+#icon-person {
+  position: absolute;
+  left: 5.5%;
+  bottom: 22%;
+}
+
+#output {
+  margin-top: 2.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 3.7rem 2.2rem 2.4rem 2.4rem;
+  border-radius: 15px;
+  background-color: #00474b;
+}
+
+#output-total,
+#output-tip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+span {
+  font-size: 3.2rem;
+  font-weight: bold;
+  letter-spacing: -0.67px;
+  color: #26c2ae;
+}
+
+#reset {
+  padding: 0.9rem 3.2rem 0.9rem 3.3rem;
+  border-radius: 5px;
+  background-color: #26c2ae;
+  color: #00474b;
+}
+
+#reset:disabled {
+  color: #0d686d;
+  opacity: 0.35;
+  cursor: unset;
+}
+
+#reset:hover {
+  background-color: #9fe8df;
+}
+
+@media screen and (min-width: 64rem) {
+  body {
+    padding: 16.3rem 26rem 23.9rem;
+  }
+
+  main {
+    width: 100rem;
+    height: 50.1rem;
+    box-shadow: 0 32px 43px 0 rgba(79, 166, 175, 0.2);
+    background-color: #fff;
+    border-radius: 25px;
+    display: flex;
+    padding: 3.2rem 3.2rem 3.2rem 4.8rem;
+    gap: 4.8rem;
+  }
+
+  #tip-div {
+    margin-top: 4rem;
+  }
+
+  #btn-container {
+    margin-top: 1.6rem;
+    display: grid;
+    grid-template-columns: repeat(3, 14.6rem);
+    gap: 1.4rem;
+    padding-bottom: 0.6rem;
+  }
+
+  #custom::placeholder,
+  #custom {
+    text-align: center;
+  }
+  #people-container {
+    margin-top: 4rem;
+  }
+
+  #output {
+    margin-top: unset;
+    gap: 2.3rem;
+    padding: 4rem;
+    height: 100%;
+    max-width: 100%;
+  }
+
+  #output-total,
+  #output-tip {
+    gap: 8rem;
+  }
+  span {
+    font-size: 4.8rem;
+  }
+
+  #reset {
+    padding: 0.9rem 3.7rem 0.9rem 4rem;
+    margin-top: 9.2rem;
+  }
+}

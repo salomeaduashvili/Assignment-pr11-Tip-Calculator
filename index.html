@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <link rel="icon" href="./images/favicon-32x32.png" />
+    <title>Tip Calculator</title>
+  </head>
+  <body>
+    <img src="./images/logo.svg" alt="logo" />
+    <main>
+      <div id="content">
+        <div id="bill-container">
+          <p>Bill</p>
+          <input type="number" placeholder="0" id="bill-input" />
+          <img src="./images/icon-dollar.svg" alt="icon-dollar" />
+        </div>
+        <div id="tip-div">
+          <p>Select Tip %</p>
+          <div id="btn-container">
+            <button id="5%tip">5%</button>
+            <button id="10%tip">10%</button>
+            <button id="15%tip">15%</button>
+            <button id="25%tip">25%</button>
+            <button id="50%tip">50%</button>
+            <input type="number" placeholder="Custom" id="custom" />
+          </div>
+        </div>
+        <div id="people-container">
+          <div id="people-text">
+            <p>Number of People</p>
+            <p id="error">Can’t be zero</p>
+          </div>
+          <input type="number" placeholder="0" id="person-input" />
+          <img
+            src="./images/icon-person.svg"
+            alt="icon-person"
+            id="icon-person"
+          />
+        </div>
+      </div>
+      <div>
+        <div id="output">
+          <div id="output-tip">
+            <div id="text-tip">
+              <h2>Tip Amount</h2>
+              <p>/ person</p>
+            </div>
+            <span id="tip-sum">$0.00</span>
+          </div>
+          <div id="output-total">
+            <div id="text-total">
+              <h2>Total</h2>
+              <p>/ person</p>
+            </div>
+            <span id="total-sum">$0.00</span>
+          </div>
+          <button id="reset" disabled="true">RESET</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
