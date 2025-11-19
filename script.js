@@ -1,8 +1,19 @@
 let tip = 0;
-
+const tipButtons = document
+  .querySelector("#btn-container")
+  .querySelectorAll("button");
+console.log(tipButtons);
 function tipGenerator(button, percent) {
-  button.addEventListener("click", () => {
+  button.addEventListener("click", (e) => {
     tip = Number(percent / 100);
+    if (tip !== 0) {
+      tipButtons.forEach((btn) => {
+        btn.style.backgroundColor = "#00474b";
+        btn.style.color = "#ffffff";
+      });
+    }
+    e.target.style.backgroundColor = "#9fe8df";
+    e.target.style.color = "#00474b";
     console.log(tip, typeof tip);
     activateReset();
   });
